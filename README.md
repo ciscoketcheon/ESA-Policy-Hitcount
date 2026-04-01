@@ -4,6 +4,10 @@ This Python script queries **Cisco ESA (Email Security Appliance) v2 API** endpo
 
 It is designed for administrators who want a **quick overview of which mail policies were triggered** in a given period.
 
+While ESA natively provides hit count reporting at the **content filter** and **message filter** levels, it does not offer visibility at the **mail policy level**. This script is designed to bridge that gap by aggregating and presenting policy-level hit count data.
+
+In addition, the tool is useful for **policy housekeeping**. Policies with **zero hit counts** are automatically excluded from the output, making it easier to identify unused or redundant policies that may be candidates for cleanup or removal.
+
 ---
 
 ## Features

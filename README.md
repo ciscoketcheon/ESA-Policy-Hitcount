@@ -13,7 +13,7 @@ It is designed for administrators who want a **quick overview of which mail poli
 - Configurable **time range** (number of days to query).
 - Configurable **number of top policies** to retrieve.
 - Handles **Basic Authentication**.
-- Optional **SSL verification** for secure ESA setups.
+- Optional **SSL verification** for secure ESA setups. (Not fully working yet)
 - Clean, easy-to-read tabular output.
 - All user parameters are centralized at the top of the script.
 
@@ -43,10 +43,10 @@ pip install requests
 Edit the user parameters at the top of `esa_policy_hitcount.py`:
 
 ```
-ESA_IP = "x.x.x.x"                # ESA IP or hostname
+ESA_IP = "x.x.x.x"                 # ESA IP or hostname
 ESA_PORT = 6080                    # ESA API port, this is default API HTTP
-API_USER = "xxxxx"              # API username
-API_PASS = "xxxxx"          # API password
+API_USER = "xxxxx"                 # API username
+API_PASS = "xxxxx"                 # API password
 DAYS_TO_QUERY = 1                  # Number of days to query, default 1 day
 TOP_N_POLICIES = 10                # Top N policies to retrieve, default Top 10
 VERIFY_SSL = False                 # True if ESA has valid SSL cert, SSL cert is not supported yet, to be added in next release.
@@ -99,7 +99,7 @@ Default-out                         9
 
 - The **hit count** represents how many times a policy was triggered (per recipient) in the selected time range.
 - ESA API limits results with `top=N`. Increase `TOP_N_POLICIES` if needed.
-- Set `VERIFY_SSL = True` if using HTTPS with a valid certificate.
+- Set `VERIFY_SSL = True` if using HTTPS with a valid certificate. (Not fully working yet)
 - The script uses **UTC time** for ESA API queries.
 
 ---

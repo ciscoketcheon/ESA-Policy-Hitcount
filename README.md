@@ -17,7 +17,6 @@ In addition, the tool is useful for **policy housekeeping**. Policies with **zer
 - Configurable **time range** (number of days to query).
 - Configurable **number of top policies** to retrieve.
 - Handles **Basic Authentication**.
-- Optional **SSL verification** for secure ESA setups. (Not fully working yet)
 - Clean, easy-to-read tabular output.
 - All user parameters are centralized at the top of the script.
 
@@ -103,7 +102,7 @@ Default-out                         9
 
 - The **hit count** represents how many times a policy was triggered (per recipient) in the selected time range.
 - ESA API limits results with `top=N`. Increase `TOP_N_POLICIES` if needed.
-- Set `VERIFY_SSL = True` if using HTTPS with a valid certificate. (Not fully working yet)
+- Set `VERIFY_SSL = True` if using HTTPS with a valid certificate. Not fully working yet, suggest to use API HTTP now.
 - The script uses **UTC time** for ESA API queries.
 
 ---

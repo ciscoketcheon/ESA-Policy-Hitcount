@@ -30,6 +30,12 @@ Install dependencies via pip:
 pip install requests
 ```
 
+## Requirements on ESA
+
+- Enable API (from Network -> IP Interfaces -> AsyncOS API)
+- Create api user credential with read permission. 
+
+
 ---
 
 ## Configuration
@@ -38,12 +44,12 @@ Edit the user parameters at the top of `esa_policy_hitcount.py`:
 
 ```
 ESA_IP = "x.x.x.x"                # ESA IP or hostname
-ESA_PORT = 6080                  # ESA API port
-API_USER = "api_user"            # ESA username
-API_PASS = "api_password"        # ESA password
-DAYS_TO_QUERY = 1                # Number of past days to query
-TOP_N_POLICIES = 10              # Top N policies to return
-VERIFY_SSL = False               # Set True if ESA has a valid SSL certificate
+ESA_PORT = 6080                    # ESA API port, this is default API HTTP
+API_USER = "xxxxx"              # API username
+API_PASS = "xxxxx"          # API password
+DAYS_TO_QUERY = 1                  # Number of days to query, default 1 day
+TOP_N_POLICIES = 10                # Top N policies to retrieve, default Top 10
+VERIFY_SSL = False                 # True if ESA has valid SSL cert, SSL cert is not supported yet, to be added in next release.
 ```
 
 ---
@@ -62,18 +68,18 @@ Sample output:
 ESA Report: Incoming Policy Hitcounts Matched - last 1 day(s)
 Time Range: 2026-03-30T18:00:00.000Z -> 2026-03-31T18:00:00.000Z
 
-kv                            129
-webs50                         7
-root after quarantine           6
-Test-Sgcweb                     5
-postmaster-forwarding           4
-Spam-FalsePositive              2
-spoofing-allowed                2
+Policy1                           129
+Policy2	                            7
+Quarantine Policy	            6
+Test-Policy                         5
+postmaster-forwarding               4
+Spam-FalsePositive                  2
+spoofing-allowed                    2
 
 ESA Report: Outgoing Policy Hitcounts Matched - last 1 day(s)
 Time Range: 2026-03-30T18:00:00.000Z -> 2026-03-31T18:00:00.000Z
 
-gmail-out                       9
+Default-out                         9
 ```
 
 ---
@@ -106,7 +112,7 @@ MIT License. Free to use, modify, and distribute.
 
 ## Author
 
-Your Name – https://github.com/yourusername
+Your Name – https://github.com/ciscoketcheon
 
 ---
 
@@ -115,3 +121,4 @@ Your Name – https://github.com/yourusername
 - Export results to **CSV or JSON** for reporting or dashboards.
 - Include **automatic pagination** for more than `top=N` results.
 - Add **authentication via token** instead of basic auth for better security.
+- Add SSL support, currently is not fully working yet

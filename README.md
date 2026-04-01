@@ -70,7 +70,7 @@ Time Range: 2026-03-30T18:00:00.000Z -> 2026-03-31T18:00:00.000Z
 
 Policy1                           129
 Policy2	                            7
-Quarantine Policy	            6
+Quarantine Policy                   6
 Test-Policy                         5
 postmaster-forwarding               4
 Spam-FalsePositive                  2

@@ -107,15 +107,10 @@ Default-out                         9
 
 ---
 
-## License
-
-MIT License. Free to use, modify, and distribute.
-
----
 
 ## Author
 
-Your Name – https://github.com/ciscoketcheon
+ciscoketcheon - https://github.com/ciscoketcheon
 
 ---
 
@@ -125,3 +120,8 @@ Your Name – https://github.com/ciscoketcheon
 - Include **automatic pagination** for more than `top=N` results.
 - Add **authentication via token** instead of basic auth for better security.
 - Add SSL support, currently is not fully working yet
+
+
+**Author:** [ciscoketcheon](https://github.com/ciscoketcheon)  
+**License:** BSD3 
+
